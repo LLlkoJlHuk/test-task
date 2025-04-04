@@ -1,4 +1,4 @@
-# React + Vite
+# Test task || REMWaste
 
 - **This project focuses on clean code, React best practices, responsiveness, and improving UI/UX**.
 - **Responsive Design**: The application adapts to both mobile and desktop views.
