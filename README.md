@@ -1,2 +1,9 @@
-# test-task
-Test task for REMWaste company
+# React + Vite
+
+Check Icon Z-index
+Hover на кнопку, которая уже активна
+Hover на кнопку, которая disabled   
+User select на карточки
+Добавил в футере при выборе карточки стоимость
+Добавил в футере при выборе карточки "Yards"
+Изменен прогрессбар в мобильной версии

@@ -1,0 +1,73 @@
+@import "../../assets/css/mixins.scss";
+
+.section-to-next-step {
+  z-index: 50;
+  padding: 1rem;
+
+  position: fixed;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+
+  background: #1C1C1C;
+  border-top: 1px solid #2A2A2A;
+
+  .main-content {
+    padding: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include tablet {
+      flex-wrap: wrap;
+    }
+
+    .card-info {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 1.5rem;
+
+      @include tablet {
+        margin-bottom: 1rem;
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .size {
+        color: #9CA3AF;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        font-weight: 400;
+      }
+
+      .cost {
+        color: #9CA3AF;
+        font-size: .875rem;
+        line-height: 1.25rem;
+        font-weight: 400;
+
+        span {
+          margin-right: .5rem;
+          color: #0037C1;
+          font-size: 1.5rem;
+          line-height: 2rem;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .step-buttons {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      gap: 1rem;
+
+      @include tablet {
+        width: 100%;
+      }
+    }
+  }
+}

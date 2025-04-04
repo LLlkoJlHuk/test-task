@@ -1,0 +1,63 @@
+@import "../../assets/css/mixins.scss";
+
+.step {
+  cursor: no-drop;
+  text-decoration: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+
+  @include bigTablet {
+    margin-bottom: 1.5rem;
+    width: 100%;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @include bigPhone {
+    margin-bottom: 1rem;
+  }
+
+  &--icon {
+    width: 24px;
+    min-width: 24px;
+    height: 24px;
+
+    svg {
+      stroke: #868686;
+    }
+  }
+
+  &--label {
+    color: #868686;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: normal;
+
+    @include bigTablet {
+      font-size: 1.25rem;
+    }
+
+    @include bigPhone {
+      font-size: 1rem;
+    }
+  }
+
+  &.isActive {
+    cursor: pointer;
+
+    .step--icon {
+      svg {
+        stroke: #0037C1;
+      }
+    }
+
+    .step--label {
+      color: #FFFFFF;
+    }
+  }
+}

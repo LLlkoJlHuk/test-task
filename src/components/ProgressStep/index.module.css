@@ -1,0 +1,57 @@
+.step {
+  cursor: no-drop;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+@media (max-width: 1024px) {
+  .step {
+    margin-bottom: 1.5rem;
+    width: 100%;
+  }
+  .step:last-child {
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 480px) {
+  .step {
+    margin-bottom: 1rem;
+  }
+}
+.step--icon {
+  width: 24px;
+  min-width: 24px;
+  height: 24px;
+}
+.step--icon svg {
+  stroke: #868686;
+}
+.step--label {
+  color: #868686;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: normal;
+}
+@media (max-width: 1024px) {
+  .step--label {
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 480px) {
+  .step--label {
+    font-size: 1rem;
+  }
+}
+.step.isActive {
+  cursor: pointer;
+}
+.step.isActive .step--icon svg {
+  stroke: #0037C1;
+}
+.step.isActive .step--label {
+  color: #FFFFFF;
+}
+
+/*# sourceMappingURL=index.module.css.map */
