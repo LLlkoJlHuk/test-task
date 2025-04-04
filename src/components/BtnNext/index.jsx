@@ -1,6 +1,7 @@
+import PropTypes from "prop-types";
 import styles from './index.module.css'
 
-function BtnNext({ link }) {
+function BtnNext({ link = "" }) {
     return (
         <a href={ link } className={styles["btn-next"]}>
             <p>Continue</p>
@@ -13,5 +14,9 @@ function BtnNext({ link }) {
         </a>
     )
 }
+
+BtnNext.propTypes = {
+    link: PropTypes.string,
+};
 
 export default BtnNext;

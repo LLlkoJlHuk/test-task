@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import styles from './index.module.css'
 
 function ProgressStep({ step, stepNow }) {
@@ -9,5 +10,10 @@ function ProgressStep({ step, stepNow }) {
         </a>
     )
 }
+
+ProgressStep.propTypes = {
+    step: PropTypes.object.isRequired,
+    stepNow: PropTypes.number.isRequired,
+};
 
 export default ProgressStep;

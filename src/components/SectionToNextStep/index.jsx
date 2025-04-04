@@ -1,6 +1,7 @@
 import styles from './index.module.css'
 import BtnBack from "@/components/BtnBack/index.jsx";
 import BtnNext from "@/components/BtnNext/index.jsx";
+import PropTypes from "prop-types";
 
 function SectionToNextStep({ card }) {
     return (
@@ -24,5 +25,14 @@ function SectionToNextStep({ card }) {
         </div>
     )
 }
+
+SectionToNextStep.propTypes = {
+    card: PropTypes.shape({
+        size: PropTypes.number.isRequired,
+        price_before_vat: PropTypes.number,
+        vat: PropTypes.number,
+    }).isRequired,
+};
+
 
 export default SectionToNextStep;

@@ -1,4 +1,5 @@
 import styles from './index.module.css'
+import PropTypes from "prop-types";
 import Preview from '@/assets/images/card-preview.jpg'
 
 function Card({ card, isSelected, onSelect }) {
@@ -85,5 +86,19 @@ function Card({ card, isSelected, onSelect }) {
         </div>
     )
 }
+
+Card.propTypes = {
+    card: PropTypes.shape({
+        allows_heavy_waste: PropTypes.bool.isRequired,
+        allowed_on_road: PropTypes.bool.isRequired,
+        size: PropTypes.number.isRequired,
+        hire_period_days: PropTypes.number,
+        price_before_vat: PropTypes.number,
+        vat: PropTypes.number,
+    }).isRequired,
+    isSelected: PropTypes.bool.isRequired,
+    onSelect: PropTypes.func.isRequired,
+};
+
 
 export default Card;

@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { useMenu } from "@/hooks/useMenu.js";
-import styles from "./index.module.css";
-import { steps } from "@/components/ProgressBar/stepsData.jsx";
 import ProgressStep from "@/components/ProgressStep/index.jsx";
+import { steps } from "@/components/ProgressBar/stepsData.jsx";
+import PropTypes from "prop-types";
+import styles from "./index.module.css";
 
 function renderSteps(steps, stepNow, separatorClass) {
     return steps.flatMap((step, index) => {
@@ -55,5 +56,9 @@ function ProgressBar({ stepNow = 0 }) {
         </>
     );
 }
+
+ProgressBar.propTypes = {
+    stepNow: PropTypes.number,
+};
 
 export default ProgressBar;
